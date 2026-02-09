@@ -2,11 +2,6 @@ name: Export Modpack
 
 on:
   workflow_dispatch:
-    inputs:
-      curseforge:
-        type: boolean
-        default: false
-        description: Export Curseforge format?
   push:
     branches: [main]
   pull_request:
@@ -61,24 +56,18 @@ jobs:
     if: needs.get-info.outputs.LASTTAG != needs.get-info.outputs.version
     steps:
       - name: Prepare
-        run: |
-          rm -rfv build; mkdir -pv build
-          echo "is_enabled=${{ (matrix.platform == 'modrinth') || (matrix.platform == 'curseforge' && inputs.curseforge == true) }}" >> ${{GITHUB_ENV}}
+        run: rm -rfv build; mkdir -pv build
 
       - name: Checkout code
-        if: env.is_enabled == true
         uses: actions/checkout@v4
 
       - name: Setup packwiz CLI
-        if: env.is_enabled == true
         uses: vspr-sh/packwiz-setup-action@master
 
       - name: Export
-        if: env.is_enabled == true
         run: packwiz ${{ matrix.platform }} export -o build/${{ env.name }}.${{ matrix.extension }}
 
       - name: Upload mr package to workflow artifacts
-        if: env.is_enabled == true
         uses: actions/upload-artifact@v6
         with:
           path: build/${{ env.name }}.${{ matrix.extension }}
@@ -86,7 +75,6 @@ jobs:
           retention-days: 1
 
       - name: Upload package to GitHub release
-        if: env.is_enabled == true
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
