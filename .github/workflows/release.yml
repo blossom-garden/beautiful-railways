@@ -23,7 +23,7 @@ jobs:
         id: cat
         run: |
           echo $(cat ./pack.toml | grep "version = ") | sed -r 's/version = //' | sed -r 's/[" ]//g' | echo "version=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
-          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[" ]//g' | sed -r 's/([a-z0-9])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]' | echo "name=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
+          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\" \:]//g' | sed -r 's/([a-z0-9])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]' | echo "name=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
           echo "LASTTAG=$(git describe --tags --abbrev=0)" >> "${GITHUB_OUTPUT}"
 
     outputs:
