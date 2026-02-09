@@ -54,11 +54,11 @@ jobs:
         shell: bash
     if: needs.get-info.outputs.LASTTAG != needs.get-info.outputs.version
     steps:
-      - name: Prepare
-        run: rm -rfv ./build; mkdir -pv ./build
-
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Prepare
+        run: mkdir -p ./build
 
       - name: Setup packwiz CLI
         uses: vspr-sh/packwiz-setup-action@master
