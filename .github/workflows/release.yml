@@ -48,15 +48,14 @@ jobs:
             extension: zip
             runner: ubuntu-latest
     runs-on: ${{ matrix.runner }}
-    permissions:
-      contents: write
+    permissions: write-all
     defaults:
       run:
         shell: bash
     if: needs.get-info.outputs.LASTTAG != needs.get-info.outputs.version
     steps:
       - name: Prepare
-        run: rm -rfv build; mkdir -pv build
+        run: rm -rfv ./build; mkdir -pv ./build
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -65,7 +64,7 @@ jobs:
         uses: vspr-sh/packwiz-setup-action@master
 
       - name: Export
-        run: packwiz ${{ matrix.platform }} export -o build/${{ env.name }}.${{ matrix.extension }}
+        run: packwiz ${{ matrix.platform }} export -o ./build/${{ env.name }}.${{ matrix.extension }}
 
       - name: Upload mr package to workflow artifacts
         uses: actions/upload-artifact@v6
