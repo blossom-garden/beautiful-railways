@@ -46,7 +46,7 @@ jobs:
     env:
       version: ${{ needs.get-info.outputs.version }}
       name: ${{ needs.get-info.outputs.name }}
-      is_enabled: ${{(matrix.platform == 'modrinth' && inputs.modrinth) || (matrix.platform == 'curseforge' && inputs.curseforge)}}
+      is_enabled: ${{ (matrix.platform == 'modrinth' && (inputs.modrinth == true || github.event_name == 'push')) || (matrix.platform == 'curseforge' && inputs.curseforge == true) }}
     strategy:
       matrix:
         include:
