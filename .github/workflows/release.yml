@@ -41,11 +41,11 @@ jobs:
       matrix:
         include:
           - platform: modrinth
-            extension: .mrpack
+            extension: mrpack
             runner: ubuntu-latest
 
           - platform: curseforge
-            extension: .zip
+            extension: zip
             runner: ubuntu-latest
     runs-on: ${{ matrix.runner }}
     permissions:
