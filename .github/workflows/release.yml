@@ -3,10 +3,6 @@ name: Export Modpack
 on:
   workflow_dispatch:
     inputs:
-      modrinth:
-        type: boolean
-        default: true
-        description: Export Modrinth format?
       curseforge:
         type: boolean
         default: false
@@ -46,7 +42,7 @@ jobs:
     env:
       version: ${{ needs.get-info.outputs.version }}
       name: ${{ needs.get-info.outputs.name }}
-      is_enabled: ${{ (matrix.platform == 'modrinth' && (inputs.modrinth == true || github.event_name == 'push')) || (matrix.platform == 'curseforge' && inputs.curseforge == true) }}
+      is_enabled: ${{ (matrix.platform == 'modrinth') || (matrix.platform == 'curseforge' && inputs.curseforge == true) }}
     strategy:
       matrix:
         include:
