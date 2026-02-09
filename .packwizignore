@@ -9,3 +9,4 @@
 /files
 /LICENSE
 *.lock
+.markdownlint-cli2.yaml

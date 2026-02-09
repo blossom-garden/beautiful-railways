@@ -1,0 +1,13 @@
+name = "Create: Some Assembly Required"
+filename = "someassemblyrequired-5.2.7.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/jZi8ogTA/versions/lbuyTO5x/someassemblyrequired-5.2.7.jar"
+hash-format = "sha512"
+hash = "0862cb781eb498cde5fc8a65fd01ce6d7f32adc5f3710b765c7c5e25662aba1ce069f9a1362d5b050daa3a2f6f866829cb4db4781bffade7c327d365e4e8df66"
+
+[update]
+[update.modrinth]
+mod-id = "jZi8ogTA"
+version = "lbuyTO5x"

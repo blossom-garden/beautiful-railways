@@ -1,0 +1,13 @@
+name = "Platform"
+filename = "Platform-neoforge-1.21.1-1.2.11.6.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/i6fiqm5y/versions/XH89ujUq/Platform-neoforge-1.21.1-1.2.11.6.1.jar"
+hash-format = "sha512"
+hash = "a50c664353e3b6c1d188a798ac7c2f048ffcd11cf0cc24d60a5ecdb4c75aec4a46e4d8baa2d8d2ec0d4dfd5ecb8058882efa0a0749571aec25fd88534c75c59b"
+
+[update]
+[update.modrinth]
+mod-id = "i6fiqm5y"
+version = "XH89ujUq"

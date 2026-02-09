@@ -1,0 +1,13 @@
+name = "Create: Lunatic's Additions"
+filename = "lunaticscreateadditions-1.0.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/pxVasnY9/versions/PX1XsxGO/lunaticscreateadditions-1.0.2.jar"
+hash-format = "sha512"
+hash = "9406ca22c2aca6e36ede47663f9d40cb22da8730e2fa00509eeb1b565dd2cc3c14d914dde1cfbe5c1c49e22943380e00c1b2bac53932cc2eb26fd8ef0724dc56"
+
+[update]
+[update.modrinth]
+mod-id = "pxVasnY9"
+version = "PX1XsxGO"
