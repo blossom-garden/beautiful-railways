@@ -43,7 +43,7 @@ jobs:
             echo "LASTTAG=$LASTTAG"
 
             echo "deps<<EOF"
-            sed '/^\s*$/d' dependencies.txt
+            cat dependencies.txt
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
     outputs:
