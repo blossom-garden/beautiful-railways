@@ -23,20 +23,25 @@ jobs:
         id: cat
         run: |
           echo $(cat ./pack.toml | grep "version = ") | sed -r 's/version = //' | sed -r 's/[" ]//g' | echo "version=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
-          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\" \:]//g' | sed -r 's/([a-z0-9])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]' | echo "name=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
+          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\" \:]//g' | sed -r 's/([a-z0-9])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]' | echo "name_snake=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
+          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\" ]//g' | echo "name=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
           echo "LASTTAG=$(git describe --tags --abbrev=0)" >> "${GITHUB_OUTPUT}"
-
+          echo "deps=$(cat ./dependencies.txt)" >> "${GITHUB_OUTPUT}"
     outputs:
       version: ${{ steps.cat.outputs.version }}
+      name_snake: ${{ steps.cat.outputs.name_snake }}
       name: ${{ steps.cat.outputs.name }}
       LASTTAG: ${{ steps.cat.outputs.LASTTAG }}
+      deps: ${{ steps.cat.outputs.deps }}
 
   build:
     needs:
       - get-info
     env:
       version: ${{ needs.get-info.outputs.version }}
+      name_snake: ${{ needs.get-info.outputs.name_snake }}
       name: ${{ needs.get-info.outputs.name }}
+      deps: ${{ needs.get-info.outputs.deps }}
     strategy:
       matrix:
         include:
@@ -69,14 +74,14 @@ jobs:
       - name: Export
         id: export
         run: |
-          packwiz ${{ matrix.platform }} export -o ./build/${{ env.name }}.${{ matrix.extension }}
-          echo "export=./build/${{ env.name }}.${{ matrix.extension }}" >> "${GITHUB_OUTPUT}"
+          packwiz ${{ matrix.platform }} export -o ./build/${{ env.name_snake }}.${{ matrix.extension }}
+          echo "export=./build/${{ env.name_snake }}.${{ matrix.extension }}" >> "${GITHUB_OUTPUT}"
 
       - name: Upload mr package to workflow artifacts
         uses: actions/upload-artifact@v6
         with:
           path: ${{ steps.export.outputs.export }}
-          name: ${{ env.name }}-${{ matrix.platform }}
+          name: ${{ env.name_snake }}-${{ matrix.platform }}
           retention-days: 1
 
       - uses: Kir-Antipov/mc-publish@v3.3
@@ -88,12 +93,13 @@ jobs:
           github-tag: ${{ env.version }}
 
           files: ${{ steps.export.outputs.export }}
-          name: ${{ env.name }}
+          name: ${{ env.name }} v${{ env.version }}
           version: ${{ env.version }}
           version-type: release
           changelog-file: CHANGELOG-LATEST.*
 
-          loaders: |
-            neoforge
-          game-versions: |
-            1.21.1
+          loaders: neoforge
+          game-versions: 1.21.1
+
+          dependencies: |
+            ${{ env.deps }}
