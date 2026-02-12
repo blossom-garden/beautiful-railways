@@ -87,8 +87,8 @@ jobs:
 
       - uses: Kir-Antipov/mc-publish@v3.3
         with:
-          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' || '' }}
-          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN || '' }}
+          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' || null }}
+          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN || null }}
 
           github-token: ${{ secrets.GITHUB_TOKEN }}
           github-tag: ${{ env.version }}
@@ -102,4 +102,4 @@ jobs:
           loaders: neoforge
           game-versions: 1.21.1
 
-          dependencies: appleskin(embedded)
+          dependencies: appleskin(embedded)\namendments(embedded)
