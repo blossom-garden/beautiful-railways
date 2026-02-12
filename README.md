@@ -1,6 +1,6 @@
 <!-- vale off -->
 
-# ![Modpack Icon](./.github/attachments/modpack-icon.png) <br/>Create: Memorable Railways
+# ![Modpack Icon](./.github/attachments/modpack-icon.png) <br/>Create: Beautiful Railways
 
 A modpack centered around creating beautiful railway networks in your worlds
 
