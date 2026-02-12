@@ -8,7 +8,7 @@ def main [outfile?: path = './dependencies.txt']: nothing -> nothing {
 
   let dependencies = $files | each {|file|
     $file.slug + "(embedded)"
-  } | sort | str join "\n"
+  } | str join "\n"
 
   $dependencies | save -f $outfile
 }
