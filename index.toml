@@ -666,17 +666,17 @@ metafile = true
 
 [[files]]
 file = "mods/tectonic.pw.toml"
-hash = "63aea16cbf3e00874a05889f1553f3ef4640b04d10c370bba78eb2377f4fbf07"
+hash = "16ff4440f9ceb00cf30d63cd063dc5759e3a19260837c11cf678824652f8344c"
 metafile = true
 
 [[files]]
 file = "mods/terralith-biome-saplings.pw.toml"
-hash = "61d849b5dd59f7f9ccf950bbce846363c89dacd6a68af977c7cfa2f29c0ef8a6"
+hash = "c03e6c09b45a4adaf1ff83c4ab10218329f375c2a622ac0960bea604810b0098"
 metafile = true
 
 [[files]]
 file = "mods/terralith.pw.toml"
-hash = "da7ee99189ad35aac094919fe33cac647d98533b23c228f10d4811f08989e2b8"
+hash = "77a945b5ff32f1a821cd2942bcd2fb411740061f022efad3e48eaa8577b48636"
 metafile = true
 
 [[files]]
@@ -810,9 +810,8 @@ hash = "66fd4a47f4eb3fc7b0e487b0fafc998f009e889188bcc5a609d04c2ab97e369f"
 metafile = true
 
 [[files]]
-file = "resourcepacks/brassless-blocks-n-bogies.pw.toml"
-hash = "907af8192309384b920d2fc457c68ee33b96ab8be3c06b4a0049dcf117d232fe"
-metafile = true
+file = "resourcepacks/Brassless Blocks n Bogies (Official).zip"
+hash = "410697c8fcca41c29b1720eeb311a54c04712b4ca7bbbe38a4d90cf296553142"
 
 [[files]]
 file = "resourcepacks/create-sophisticated-backpacks.pw.toml"

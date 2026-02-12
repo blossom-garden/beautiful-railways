@@ -1,8 +1,0 @@
-name = "Brassless Blocks n Bogies"
-filename = "Brassless Blocks n Bogies (Official Pack).zip"
-side = "client"
-
-[download]
-url = "https://cdn.discordapp.com/attachments/1399194352051294208/1466232854508736677/Brassless_Blocks_n_Bogies_Official_Pack.zip?ex=698b2881&is=6989d701&hm=4edc9f876a9ec9eb65515e3e124db14f72627fe4e48fce16b776d142b7f863c1&"
-hash-format = "sha512"
-hash = "b3a25a0c16dc8d75724092dbdb11e1d69799869ad068d4983c479d18d284ea46a75746120d6ca4617e5591c7f4a837d79bf75e88f0b7ff49caa3d00972f83fb1"
