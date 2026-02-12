@@ -80,7 +80,6 @@ jobs:
           retention-days: 1
 
       - uses: Kir-Antipov/mc-publish@v3.3
-        if: matrix.platform == 'modrinth'
         with:
           modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' || '' }}
           modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN || '' }}
