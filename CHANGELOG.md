@@ -1,77 +1,16 @@
-# Create: Memorable Railways
-
-A modpack centered around creating beautiful railway networks in your worlds
-
-## About
-
-Utilize [Create](https://modrinth.com/mod/LNytGWDc)'s great train system with the enhancement of other mods such as:
-
-- [Create Railways Navigator](https://modrinth.com/mod/Dq3STxps) by MrJulsen
-- [Create: Threaded Trains](https://modrinth.com/mod/RYJzdkDr) by MrJulsen
-- [Create Train Physics](https://modrinth.com/mod/5nYnKExR) by Szedann
-- [Create Unlimited](https://modrinth.com/mod/jyG2CDff) by rdh
-
-And expand your decoration possibilities with:
-
-<!-- vale off -->
-
-- [Amendments](https://modrinth.com/mod/6iTJugQR) by MehVahdJukaar, Plantkillable
-- [Another Furniture](https://modrinth.com/mod/ulloLmqG) by Starfish Studios, Crispytwig, Synthestra
-- [Chipped](https://modrinth.com/mod/BAscRYKm) by Alex Nijjar, Grimbop, Kekie6, ThatGravyBoat
-- [Comforts](https://modrinth.com/mod/SaCpeal4) by Illusive Soulworks
-- [Create: Bells & Whistles](https://modrinth.com/mod/gJ5afkVv) by lev
-- [Create Bits 'n' Bobs](https://modrinth.com/mod/T8bvmqVZ) by Cake, Kipti, NormalGuy, Astral, Spydnel
-- [Create: Copycats\+](https://modrinth.com/mod/UT2M39wf) by Lysine, Bennyboy1695, Redcat_XVIII
-- [Create Deco](https://modrinth.com/mod/sMvUb4Rb) by Kayla, Talrey, Ordana, Cassian
-- [Design n' Decor](https://modrinth.com/mod/x49wilh8) by LopyLuna, DrMangoTea
-- [Dusty Decorations](https://modrinth.com/mod/KgFOuaiZ) by Tip Mischief
-- and more... see [Mod list](#mod-list)
-
-<!-- vale on -->
-
-Explore great worlds crafted by:
-
-- [WWOO](https://modrinth.com/project/II7t6llZ) by WilliamWythers
-- [Yungs Mods](https://modrinth.com/user/HCGwycZf)
-- [Towns and Towers](https://modrinth.com/project/DjLobEOy) by Biban_Auriu, Kubek
-- [Dungeons and Taverns](https://modrinth.com/mod/tpehi7ww) by NovaWostra, Konci, Walls
-
-Delight yourself in the world of [Farmer's Delight](https://modrinth.com/mod/R2OftAxM) by vectorwing, and it's addons:
-
-<!-- vale off -->
-
-- [Brewin' And Chewin'](https://modrinth.com/mod/hIu9KJTT) by Probleyes, Umpaz, MerchantCalico
-- [Create: Food](https://modrinth.com/mod/4HnO3el1) by average_anime
-- [Farmer's Delight: Extended](https://modrinth.com/mod/CxjQ2P6f) by EeveeBeby, Opee
-- [Fruits Delight](https://modrinth.com/mod/g6sbyCTu) by lcy0x1
-- [More Delight](https://modrinth.com/mod/znHQQtuU) by Axperty
-- [Pineapple Delight](https://modrinth.com/mod/8wXnuOvg) by someoneice
-- [Pizza Delight](https://modrinth.com/mod/6VTyLLiG) by Tiviacz1337, SirSquidly
-- [Thirst Was Taken](https://modrinth.com/mod/iUheEnjm) by ghen
-
-<!-- vale on -->
-
-### Notes
-
-Thanks to the mod [Create Train Physics](https://modrinth.com/mod/5nYnKExR) by Szedann, Create Trains now will obey some
-physics. According to the mod's description there is now a need for a Steam Engine Block (or any other block on the
-`\#create_train_physics:train_motor` tag) for Trains to actually move, and as a plus, train mass is taken into account
-for climbs and acceleration. If this sounds like a nuisance to you just remove the mod!
-
-> [!TIP]
-> Remember that Steam Engines need tanks to be placed but not to stay placed! This modpack also offers a datapack that
-> adds blast furnaces to the `\#create_train_physics:train_motor` tag)
+# Create: Beautiful Railways
 
 <!-- vale off -->
 <!-- markdownlint-disable line-length -->
 
-## Mod list
+## v1.0.0
+
+### modlist
 
 - [Amendments](https://modrinth.com/mod/6iTJugQR) by MehVahdJukaar, Plantkillable
 - [Another Furniture](https://modrinth.com/mod/ulloLmqG) by Starfish Studios, Crispytwig, Synthestra
 - [AppleSkin](https://modrinth.com/mod/EsAfCjCV) by squeek
 - [Architectury](https://modrinth.com/mod/lhGA9TYQ) by shedaniel
-- [Armor Poser](https://modrinth.com/mod/PFwYNrHb) by Mrbysco, ShyNieke
 - [Athena](https://modrinth.com/mod/b1ZV3DIJ) by ThatGravyBoat
 - [Better Climbing](https://modrinth.com/mod/ZucWZEBV) by artemis
 - [Better Clouds](https://modrinth.com/mod/5srFLIaK) by Qendolin
@@ -87,7 +26,7 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [Clumps](https://modrinth.com/mod/Wnxd13zP) by Jared
 - [Cocktails Delight](https://modrinth.com/mod/hzcliQdE) by Draconic Archer
 - [Comforts](https://modrinth.com/mod/SaCpeal4) by Illusive Soulworks
-- [Connector Extras](https://modrinth.com/mod/FYpiwiBR) by Su5eD
+- [Continuity](https://modrinth.com/mod/1IjD5062) by PepperCode1
 - [Create](https://modrinth.com/mod/LNytGWDc) by simibubi
 - [Create & FD Dough](https://modrinth.com/mod/UH3ZCkYf) by seaweedCS
 - [Create Bits 'n' Bobs](https://modrinth.com/mod/T8bvmqVZ) by Cake, Kipti, NormalGuy, Astral, Spydnel
@@ -107,16 +46,15 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [Create: Copycats\+](https://modrinth.com/mod/UT2M39wf) by Lysine, Bennyboy1695, Redcat_XVIII
 - [Create: Dragons Plus](https://modrinth.com/mod/dzb1a5WV) by DragonsPlus
 - [Create: Drill Drain](https://modrinth.com/mod/DRKSn9G8) by Cake, Kipti
-- [Create: Enchantment Industry](https://modrinth.com/mod/JWGBpFUP) by DragonsPlus
 - [Create: Fluid](https://modrinth.com/mod/JlZEVjsF) by Adonis
 - [Create: Food](https://modrinth.com/mod/4HnO3el1) by average_anime
 - [Create: Item Drawers](https://modrinth.com/mod/3H1Rxv8i) by Emythiel
 - [Create: Lunatic's Additions](https://modrinth.com/mod/pxVasnY9) by Lunatic Pup
 - [Create: Metalwork](https://modrinth.com/mod/q5i9RTSJ) by averageanime
 - [Create: Overbalanced](https://modrinth.com/mod/PsdnrXan)
-- [Create: Power Loader](https://modrinth.com/mod/wPQ6GgFE) by Lysine
 - [Create: Smart Bounds](https://modrinth.com/mod/kSok4DxT) by LiukRast
 - [Create: Smoke & Buffers](https://modrinth.com/mod/AlV3A1Up) by kodiitulip
+- [Create: Steam 'n' Rails 1\.21\.1](https://modrinth.com/mod/L3Jv0QZI) by PoppyBlossom, Chameleon538
 - [Create: Threaded Trains](https://modrinth.com/mod/RYJzdkDr) by MrJulsen
 - [Create: Transmission](https://modrinth.com/mod/QFCkBuIh) by SerpensSolida
 - [Create: Vibrant Vaults](https://modrinth.com/mod/hddN8ksR) by ZLT
@@ -142,7 +80,6 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [Flerovium](https://modrinth.com/mod/4Rh1Mobu) by MoePus
 - [Forgified Fabric API](https://modrinth.com/mod/Aqlf1Shp) by Sinytra, FabricMC
 - [Fruits Delight](https://modrinth.com/mod/g6sbyCTu) by lcy0x1
-- [Fusion](https://modrinth.com/mod/p19vrgc2) by SuperMartijn642
 - [Gears n' Kinetics](https://modrinth.com/mod/gEWECBVL) by LopyLuna
 - [GeckoLib 4](https://modrinth.com/mod/8BmcQJ2H) by Gecko, Eliot, AzureDoom, DerToaster, Tslat, Witixin
 - [ImmediatelyFast](https://modrinth.com/mod/5ZwdcRci) by RK_01
@@ -151,14 +88,12 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [LAN World Plug\-n\-Play](https://modrinth.com/mod/RTWpcTBp) by Satxm, Rikka0w0
 - [Lighty](https://modrinth.com/mod/yjvKidNM) by andi_makes, agnor99, Alveel
 - [Lithium](https://modrinth.com/mod/gvQqBUqZ) by 2No2Name, JellySquid
-- [Macaw's Doors](https://modrinth.com/mod/kNxa8z3e) by Sketch Macaw & Sketch Peachy
-- [Macaw's Fences and Walls](https://modrinth.com/mod/GmwLse2I) by Sketch Macaw & Peachy Macaw
-- [Macaw's Trapdoors](https://modrinth.com/mod/n2fvCDlM) by Sketch Macaw & Peachy Macaw
 - [Minecraft Cursor](https://modrinth.com/mod/o5fhgLeQ) by fishstiz
 - [Moonlight Lib](https://modrinth.com/mod/twkfQtEc) by MehVahdJukaar
 - [More Delight](https://modrinth.com/mod/znHQQtuU) by Axperty
 - [Mouse Tweaks](https://modrinth.com/mod/aC3cM3Vq) by Ivan Molodetskikh \(YaLTeR\)
 - [No Chat Reports](https://modrinth.com/mod/qQyHxfxd) by Aizistral
+- [Old infrastructure](https://modrinth.com/mod/h7UjQwqh) by Antenne
 - [Open Parties and Claims](https://modrinth.com/mod/gF3BGWvG) by Xaero96 and other contributors
 - [Particle Rain](https://modrinth.com/mod/nrikgvxm) by pigcart
 - [Particular](https://modrinth.com/mod/pYFUU6cq)
@@ -170,8 +105,6 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [Pretty In Pink](https://modrinth.com/mod/sNPHd5e4) by Weido's Oddities \(@weidos\.oddities\), pinkmachine \(@pinkmachine\)
 - [Ratatouille](https://modrinth.com/mod/XM0ifg8q) by Forsteri, Thaumstrial, Even
 - [Ratatouille Fried Delights](https://modrinth.com/mod/xG1YXmVZ) by Forsteri, Even, Thaumstrial
-- [Rechiseled](https://modrinth.com/mod/B0g2vT6l) by SuperMartijn642
-- [Rechiseled: Create](https://modrinth.com/mod/E6867niZ) by SuperMartijn642
 - [Reese's Sodium Options](https://modrinth.com/mod/Bh37bMuy) by FlashyReese
 - [Remove Reloading Screen](https://modrinth.com/mod/ZP7xHXtw) by dima_dencep
 - [Resourceful Lib](https://modrinth.com/mod/G1hIVOrD) by ThatGravyBoat, Epic_Oreo
@@ -189,8 +122,6 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [Sophisticated Core](https://modrinth.com/mod/nmoqTijg) by P3pp3rF1y
 - [Sound Physics Remastered](https://modrinth.com/mod/qyVF9oeo) by Sonic Ether, vlad2305m, Max Henkel
 - [SparseStructures](https://modrinth.com/mod/qwvI41y9) by MaxenceDC
-- [SuperMartijn642's Config Library](https://modrinth.com/mod/LN9BxssP) by SuperMartijn642
-- [SuperMartijn642's Core Lib](https://modrinth.com/mod/rOUBggPv) by SuperMartijn642
 - [Supplementaries](https://modrinth.com/mod/fFEIiSDQ) by MehVahdJukaar, Plantkillable
 - [Supplementaries Squared](https://modrinth.com/mod/dCCkNFwE) by MehVahdJukaar, Plantkillable
 - [Thirst Was Taken](https://modrinth.com/mod/iUheEnjm) by ghen
@@ -219,6 +150,3 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [YUNG's Better Witch Huts](https://modrinth.com/mod/t5FRdP87) by YUNGNICKYOUNG, Acarii
 - [YetAnotherConfigLib](https://modrinth.com/mod/1eAoo2KR) by isXander
 - [You're in Grave Danger](https://modrinth.com/mod/HnD1GX6e) by b1n_ry
-
-<!-- vale on -->
-<!-- markdownlint-enable line-length -->

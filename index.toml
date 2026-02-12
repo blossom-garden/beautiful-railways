@@ -5,8 +5,16 @@ file = "datapacks/more_train_motors.zip"
 hash = "b2a457c89a0ebc18891fdaca6c3c722b42fb0c310643104134a4dd1724cbaf99"
 
 [[files]]
-file = "import-modlist.nu"
-hash = "096772b2b47312284647b52ca6b79245d1fa82993f447a71e310c54ce8de620f"
+file = "datapacks/nametag-backport.zip"
+hash = "a2a4ae48e4a242423e5dd7648729d6f76ee8f2a7c48ce87a174276a4bfa911d6"
+
+[[files]]
+file = "datapacks/rechiselingchipped.zip"
+hash = "a0945022a35ea10013f50ed895ffdddc997fa92ef3c9b2f412f366e895511bcd"
+
+[[files]]
+file = "datapacks/unbreakables.zip"
+hash = "19926e5aafc4a2598fbae77e6a7f8057b884d48ff7d2ae4ef22dd5b71f031552"
 
 [[files]]
 file = "mods/amendments.pw.toml"
@@ -26,6 +34,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "ea336d25c3e21ef168aec20e1ea470c96949ad29632646ee8e8ab0d74b4bbfc9"
+metafile = true
+
+[[files]]
+file = "mods/armor-poser.pw.toml"
+hash = "a9e484b00a179520ca4d20e23be6b2446da6773c7db4a967c1edac9557a77766"
 metafile = true
 
 [[files]]
@@ -114,13 +127,13 @@ hash = "36f2f6e74b7dbeccb504572d47006582207544fa234a095093b97adfc7ecd5ac"
 metafile = true
 
 [[files]]
-file = "mods/connector.pw.toml"
-hash = "c2886290bb5b8fbfd2378434ca850141d93f609b39e47fe9b557ef64a869f861"
+file = "mods/connector-extras.pw.toml"
+hash = "52e2cb54ee2933bf00e9b7886f47938a2dce1bf998293be2b38552083ffa5f9a"
 metafile = true
 
 [[files]]
-file = "mods/continuity.pw.toml"
-hash = "2e082857985c7550efdad38a1997b9805051b07fb61b0cd30921e786a8521130"
+file = "mods/connector.pw.toml"
+hash = "c2886290bb5b8fbfd2378434ca850141d93f609b39e47fe9b557ef64a869f861"
 metafile = true
 
 [[files]]
@@ -189,6 +202,11 @@ hash = "56ff7fa56eb6ae7d32cdd1f7ce84022d1ed25b416dd9142572ef0d2360d49ec9"
 metafile = true
 
 [[files]]
+file = "mods/create-enchantment-industry.pw.toml"
+hash = "9f3bd10fad13a1024513590b53976f0c7c9eb404727b3d08fe87ebbf451bcd04"
+metafile = true
+
+[[files]]
 file = "mods/create-fd-dough.pw.toml"
 hash = "734ac10c4af17fc334c9440e7919ea1621730f41f9edcaaf848d6ba3aa450a3e"
 metafile = true
@@ -219,8 +237,8 @@ hash = "2ccd7b4207893b19787f1d94c6df2d41ab114a93d3fffebf51f6914a009c8650"
 metafile = true
 
 [[files]]
-file = "mods/create-old-infrastructure.pw.toml"
-hash = "0c9fa8b644fe03d6a040eaa6cab43623fd7b4a7fa8850d4f1428858c09f5c39e"
+file = "mods/create-power-loader.pw.toml"
+hash = "ee76dbe108ebf5cf68047f60ecabee5aeb029015253dc82c007b941a6d6cfcdf"
 metafile = true
 
 [[files]]
@@ -246,11 +264,6 @@ metafile = true
 [[files]]
 file = "mods/create-smoke-buffers.pw.toml"
 hash = "fcfad54d985bbb7065956bae52b949837644c51c639f99f1adb80f72f81728e9"
-metafile = true
-
-[[files]]
-file = "mods/create-steam-n-rails-1.21.1.pw.toml"
-hash = "fa7e815272f183ccdeac6baff3690f6291c4117646af8912123b705fde64dbef"
 metafile = true
 
 [[files]]
@@ -389,6 +402,11 @@ hash = "ed81ea92db883c33f7ba50c2f4f0a42a92efc4dc72052f6601aff79fd77a3105"
 metafile = true
 
 [[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "9342bd3338c6fbb80f84625e2715a6c443b54daff11826f0dfb9ebb6ab411fd2"
+metafile = true
+
+[[files]]
 file = "mods/gears-n-kinetics.pw.toml"
 hash = "ca9a6e860a062bf02cdc222775e8adaa2c0d9a38891464eeb55a12eecef69ce4"
 metafile = true
@@ -396,6 +414,11 @@ metafile = true
 [[files]]
 file = "mods/geckolib.pw.toml"
 hash = "415ae259d7d6c92717710d6f80494d9f3c0884c6a2a35f993ad31e287f64632f"
+metafile = true
+
+[[files]]
+file = "mods/globalpacks.pw.toml"
+hash = "a7f2ae8ea415e95ce1a3518b66edcaf124d8903ff9101d07331f7fec92b3400f"
 metafile = true
 
 [[files]]
@@ -421,6 +444,21 @@ metafile = true
 [[files]]
 file = "mods/lithium.pw.toml"
 hash = "e7544296d2cdd85e43a60cf3e7a8f3e036782e14abc4efeea7f064d980d59dd5"
+metafile = true
+
+[[files]]
+file = "mods/macaws-doors.pw.toml"
+hash = "702df8b679041c5f459da5a0dc456f70de336810bc69ff726d8c925bf484e99c"
+metafile = true
+
+[[files]]
+file = "mods/macaws-fences-and-walls.pw.toml"
+hash = "ea28bcac23c070998d1f7df5dcbf248831c33f59067eaf2fd125adfa07c5722c"
+metafile = true
+
+[[files]]
+file = "mods/macaws-trapdoors.pw.toml"
+hash = "4a1f84dbcd179fa481a4d0e5f45da24415158d373117348d4438eaceff4f5fcc"
 metafile = true
 
 [[files]]
@@ -485,7 +523,7 @@ metafile = true
 
 [[files]]
 file = "mods/platform.pw.toml"
-hash = "b36ff93e1afbd0f6bfad71789c4b6f85700499197a7615c38f87af85ba288a54"
+hash = "bcbefa28dda9e9de6e31a92314511444bea08d53de0dc458ebd3f5cc053a24fb"
 metafile = true
 
 [[files]]
@@ -501,6 +539,16 @@ metafile = true
 [[files]]
 file = "mods/pretty-in-pink.pw.toml"
 hash = "d68dc1f0a4d96cfb3d947925daf7a66b97ecf356e9da21a0ee0646bf3390c634"
+metafile = true
+
+[[files]]
+file = "mods/rechiseled-create.pw.toml"
+hash = "e3e04f1664902e639c5d1df39cc8085fdece053827479b452ac728bcd3604c13"
+metafile = true
+
+[[files]]
+file = "mods/rechiseled.pw.toml"
+hash = "fec82f06aaf0d1edad4a4755b7e904c4f7327ba64d8d4063012b4c798ecff323"
 metafile = true
 
 [[files]]
@@ -530,7 +578,7 @@ metafile = true
 
 [[files]]
 file = "mods/simple-voice-chat.pw.toml"
-hash = "09248b2991edcad1048358a25ca198e15d2d7cfccd4f2bfc1d1c3b0c5b8fd6ff"
+hash = "15c145ff1f48e22759871c48775951ade48bc1875b2acc9f88c23b78537c596a"
 metafile = true
 
 [[files]]
@@ -565,12 +613,12 @@ metafile = true
 
 [[files]]
 file = "mods/sophisticated-backpacks.pw.toml"
-hash = "21879681844226024fbf8b58eaea60167f06fbaf20ff0d39a09f17b20583246f"
+hash = "765832eca01cad73acbfac6ed74cb0169cc14ca6c9e7c9b5396cd2d7bdaa547c"
 metafile = true
 
 [[files]]
 file = "mods/sophisticated-core.pw.toml"
-hash = "bc43380e7014014766771e81123922d0633a9e5523ed9c0d81ea7f209a3f62ed"
+hash = "5569b0e47ee6ef3cc89609bc93bbec46bb023153be244510069f37209cd8ab13"
 metafile = true
 
 [[files]]
@@ -581,6 +629,16 @@ metafile = true
 [[files]]
 file = "mods/sparsestructures.pw.toml"
 hash = "8c71edbbb86e5d3e1c14ea6629382539d44e75b1061725df9c3abceb889a8591"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-config-lib.pw.toml"
+hash = "62bd7012826fdcccf17a089055be67f87fb7335c88e73efc52bc9e51a1bf3188"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-core-lib.pw.toml"
+hash = "0b8161b7e8c71379084080673b304a090e187b1ad45ddc2bb90ebae11f401f6f"
 metafile = true
 
 [[files]]
@@ -746,6 +804,21 @@ metafile = true
 [[files]]
 file = "resourcepacks/create-touch-ups.pw.toml"
 hash = "958c79fb205250cc764670083030ae928470c6bfd92ba5c9d47ca7981cd35a14"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fusion-block-transitions.pw.toml"
+hash = "e5f49f7a3b49f7a03f667c5c5ca43826e7abbfcc0a9fe2499af89b461fac0819"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fusion-connected-blocks.pw.toml"
+hash = "0e27eea95511f0914b8db1e75cfde84ca748251bc5d24c42dd9af38abd77afdc"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fusion-connected-glass.pw.toml"
+hash = "cc4c03200baa367d40720320336b692e6c4fe71edbea890e27210bb2cc42408c"
 metafile = true
 
 [[files]]
