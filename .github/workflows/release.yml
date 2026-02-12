@@ -67,22 +67,34 @@ jobs:
         uses: vspr-sh/packwiz-setup-action@master
 
       - name: Export
-        run: packwiz ${{ matrix.platform }} export -o ./build/${{ env.name }}.${{ matrix.extension }}
+        id: export
+        run: |
+          packwiz ${{ matrix.platform }} export -o ./build/${{ env.name }}.${{ matrix.extension }}
+          echo "export=./build/${{ env.name }}.${{ matrix.extension }}" >> "${GITHUB_OUTPUT}"
 
       - name: Upload mr package to workflow artifacts
         uses: actions/upload-artifact@v6
         with:
-          path: build/${{ env.name }}.${{ matrix.extension }}
+          path: ${{ steps.export.outputs.export }}
           name: ${{ env.name }}-${{ matrix.platform }}
           retention-days: 1
 
-      - name: Upload package to GitHub release
-        uses: svenstaro/upload-release-action@v2
+      - uses: Kir-Antipov/mc-publish@v3.3
+        if: matrix.platform == 'modrinth'
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/${{ env.name }}.${{ matrix.extension }}
-          asset_name: ${{ env.name }}.${{ matrix.extension }}
-          release_name: v${{ env.version }}
-          tag: ${{ env.version }}
-          overwrite: true
-          body: ${{ steps.prepare.outputs.body }}
+          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' || '' }}
+          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN || '' }}
+
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-tag: ${{ env.version }}
+
+          files: ${{ steps.export.outputs.export }}
+          name: ${{ env.name }}
+          version: ${{ env.version }}
+          version-type: release
+          changelog-file: CHANGELOG-LATEST.*
+
+          loaders: |
+            neoforge
+          game-versions: |
+            1.21.1

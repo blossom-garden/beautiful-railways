@@ -455,6 +455,11 @@ hash = "e7544296d2cdd85e43a60cf3e7a8f3e036782e14abc4efeea7f064d980d59dd5"
 metafile = true
 
 [[files]]
+file = "mods/lithostitched.pw.toml"
+hash = "f1af6465928843e5a89eb0602457a89e100168053bb507150744ced4953a286e"
+metafile = true
+
+[[files]]
 file = "mods/macaws-doors.pw.toml"
 hash = "702df8b679041c5f459da5a0dc456f70de336810bc69ff726d8c925bf484e99c"
 metafile = true
@@ -660,6 +665,21 @@ hash = "c6182c863ef7758553bc7ad14b8b111e094bd7feda60793e4c656cd9a225fce4"
 metafile = true
 
 [[files]]
+file = "mods/tectonic.pw.toml"
+hash = "63aea16cbf3e00874a05889f1553f3ef4640b04d10c370bba78eb2377f4fbf07"
+metafile = true
+
+[[files]]
+file = "mods/terralith-biome-saplings.pw.toml"
+hash = "61d849b5dd59f7f9ccf950bbce846363c89dacd6a68af977c7cfa2f29c0ef8a6"
+metafile = true
+
+[[files]]
+file = "mods/terralith.pw.toml"
+hash = "da7ee99189ad35aac094919fe33cac647d98533b23c228f10d4811f08989e2b8"
+metafile = true
+
+[[files]]
 file = "mods/thirst-was-taken.pw.toml"
 hash = "7186d80f0afd569ac8ec64d0f78382fe03b092de01d72f722f79b77c1cad4412"
 metafile = true
@@ -707,11 +727,6 @@ metafile = true
 [[files]]
 file = "mods/wi-zoom.pw.toml"
 hash = "9ec08d474d8c886bc0719b2d27d9b5f1893bc8d4baceb0b78824e4a231e7968b"
-metafile = true
-
-[[files]]
-file = "mods/wwoo.pw.toml"
-hash = "1960c304ef7e5eb391934e0c102fd3346afe586cd5df5efb0cd7235e0a583634"
 metafile = true
 
 [[files]]
