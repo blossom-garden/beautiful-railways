@@ -22,47 +22,30 @@ jobs:
       - name: Determine version number, pack name and last version number
         id: cat
         run: |
-          python3 <<'PY'
-          import tomllib
-          import subprocess
-          import re
-          import os
+          set -euo pipefail
 
-          # Load TOML safely
-          with open("pack.toml", "rb") as f:
-              data = tomllib.load(f)
+          version=$(grep '^version\s*=' pack.toml | head -n1 | cut -d '"' -f2)
+          name=$(grep '^name\s*=' pack.toml | head -n1 | cut -d '"' -f2)
 
-          version = str(data["version"])
-          name = str(data["name"])
+          # snake_case conversion
+          name_snake=$(echo "$name" \
+            | sed -E 's/([a-z0-9])([A-Z])/\1_\2/g' \
+            | sed -E 's/[^a-zA-Z0-9]+/_/g' \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed -E 's/^_+|_+$//g')
 
-          # Convert to snake_case
-          name_snake = re.sub(r'[^a-zA-Z0-9]+', '_', name)  # replace spaces/symbols
-          name_snake = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', name_snake)  # camelCase
-          name_snake = name_snake.lower().strip('_')
+          LASTTAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "none")
 
-          # Get last tag safely
-          try:
-              last_tag = subprocess.check_output(
-                  ["git", "describe", "--tags", "--abbrev=0"],
-                  stderr=subprocess.DEVNULL
-              ).decode().strip()
-          except subprocess.CalledProcessError:
-              last_tag = "none"
+          {
+            echo "version=$version"
+            echo "name=$name"
+            echo "name_snake=$name_snake"
+            echo "LASTTAG=$LASTTAG"
 
-          github_output = os.environ["GITHUB_OUTPUT"]
-
-          with open(github_output, "a") as f:
-              f.write(f"version={version}\n")
-              f.write(f"name={name}\n")
-              f.write(f"name_snake={name_snake}\n")
-              f.write(f"LASTTAG={last_tag}\n")
-
-              f.write("deps<<EOF\n")
-              with open("dependencies.txt", "r") as deps_file:
-                  f.write(deps_file.read())
-              f.write("\nEOF\n")
-          PY
-
+            echo "deps<<EOF"
+            sed '/^\s*$/d' dependencies.txt
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
     outputs:
       version: ${{ steps.cat.outputs.version }}
       name_snake: ${{ steps.cat.outputs.name_snake }}
@@ -123,9 +106,10 @@ jobs:
           retention-days: 1
 
       - uses: Kir-Antipov/mc-publish@v3.3
+        if: matrix.platform == 'modrinth'
         with:
-          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' }}
-          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN }}
+          modrinth-id: p1qfuGUm
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           github-token: ${{ secrets.GITHUB_TOKEN }}
           github-tag: ${{ env.version }}
@@ -138,5 +122,20 @@ jobs:
 
           loaders: neoforge
           game-versions: 1.21.1
+          dependencies: ${{ env.deps }}
 
+      - uses: Kir-Antipov/mc-publish@v3.3
+        if: matrix.platform == 'curseforge'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-tag: ${{ env.version }}
+
+          files: ${{ steps.export.outputs.export }}
+          name: ${{ env.name }} v${{ env.version }}
+          version: ${{ env.version }}
+          version-type: release
+          changelog-file: CHANGELOG-LATEST.*
+
+          loaders: neoforge
+          game-versions: 1.21.1
           dependencies: ${{ env.deps }}
