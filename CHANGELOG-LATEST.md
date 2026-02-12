@@ -1,17 +1,18 @@
 <!-- vale off -->
 <!-- markdownlint-disable line-length -->
 <!-- markdownlint-disable first-line-h1 -->
+<!-- markdownlint-disable no-emphasis-as-heading -->
 
-## v1.1.0
+**v1.0.0**
 
-### removed
+**Removed**
 
 - [Old infrastructure](https://modrinth.com/mod/h7UjQwqh) by Antenne
 - [Create: Steam 'n' Rails 1\.21\.1](https://modrinth.com/mod/L3Jv0QZI) by PoppyBlossom, Chameleon538
   (Weird conflicts with Train Physics)
 - [Continuity](https://modrinth.com/project/1IjD5062) by Pepper_Bell (Migrating to use Fusion)
 
-### added
+**Added**
 
 - Mods
   - [Macaw's Fences and Walls](https://modrinth.com/project/GmwLse2I) by sketchmacaw

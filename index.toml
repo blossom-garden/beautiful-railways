@@ -1,8 +1,12 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/global_packs.toml"
+hash = "63d7d8fac8cde387f15afa35459f57c9f596cb11df54d69e91520b13aea52cd3"
+
+[[files]]
 file = "datapacks/more_train_motors.zip"
-hash = "b2a457c89a0ebc18891fdaca6c3c722b42fb0c310643104134a4dd1724cbaf99"
+hash = "6e15cc6dfe47a9365aba40618bf00f88aec0794ef6b627eee7d5e0b457d16583"
 
 [[files]]
 file = "datapacks/nametag-backport.zip"
@@ -15,6 +19,10 @@ hash = "a0945022a35ea10013f50ed895ffdddc997fa92ef3c9b2f412f366e895511bcd"
 [[files]]
 file = "datapacks/unbreakables.zip"
 hash = "19926e5aafc4a2598fbae77e6a7f8057b884d48ff7d2ae4ef22dd5b71f031552"
+
+[[files]]
+file = "icon.png"
+hash = "0bba4a558d50f191d6e887f9184b8c38a17f29c1c3d137e1cf14831ba7ceb8b1"
 
 [[files]]
 file = "mods/amendments.pw.toml"

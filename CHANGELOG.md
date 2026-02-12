@@ -1,11 +1,12 @@
-# Create: Beautiful Railways
-
 <!-- vale off -->
 <!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable no-emphasis-as-heading -->
 
-## v1.0.0
+# Create: Beautiful Railways
 
-### modlist
+**v1.0.0**
+
+**Modlist**
 
 - [Amendments](https://modrinth.com/mod/6iTJugQR) by MehVahdJukaar, Plantkillable
 - [Another Furniture](https://modrinth.com/mod/ulloLmqG) by Starfish Studios, Crispytwig, Synthestra

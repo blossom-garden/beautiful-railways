@@ -1,4 +1,6 @@
-# Create: Memorable Railways
+<!-- vale off -->
+
+# ![Create: Memorable Railways](./.github/attachments/modpack-icon.png) <br/>Create: Memorable Railways
 
 A modpack centered around creating beautiful railway networks in your worlds
 
@@ -13,8 +15,6 @@ Utilize [Create](https://modrinth.com/mod/LNytGWDc)'s great train system with th
 
 And expand your decoration possibilities with:
 
-<!-- vale off -->
-
 - [Amendments](https://modrinth.com/mod/6iTJugQR) by MehVahdJukaar, Plantkillable
 - [Another Furniture](https://modrinth.com/mod/ulloLmqG) by Starfish Studios, Crispytwig, Synthestra
 - [Chipped](https://modrinth.com/mod/BAscRYKm) by Alex Nijjar, Grimbop, Kekie6, ThatGravyBoat
@@ -27,8 +27,6 @@ And expand your decoration possibilities with:
 - [Dusty Decorations](https://modrinth.com/mod/KgFOuaiZ) by Tip Mischief
 - and more... see [Mod list](#mod-list)
 
-<!-- vale on -->
-
 Explore great worlds crafted by:
 
 - [WWOO](https://modrinth.com/project/II7t6llZ) by WilliamWythers
@@ -37,8 +35,6 @@ Explore great worlds crafted by:
 - [Dungeons and Taverns](https://modrinth.com/mod/tpehi7ww) by NovaWostra, Konci, Walls
 
 Delight yourself in the world of [Farmer's Delight](https://modrinth.com/mod/R2OftAxM) by vectorwing, and it's addons:
-
-<!-- vale off -->
 
 - [Brewin' And Chewin'](https://modrinth.com/mod/hIu9KJTT) by Probleyes, Umpaz, MerchantCalico
 - [Create: Food](https://modrinth.com/mod/4HnO3el1) by average_anime
@@ -49,20 +45,17 @@ Delight yourself in the world of [Farmer's Delight](https://modrinth.com/mod/R2O
 - [Pizza Delight](https://modrinth.com/mod/6VTyLLiG) by Tiviacz1337, SirSquidly
 - [Thirst Was Taken](https://modrinth.com/mod/iUheEnjm) by ghen
 
-<!-- vale on -->
-
 ### Notes
 
 Thanks to the mod [Create Train Physics](https://modrinth.com/mod/5nYnKExR) by Szedann, Create Trains now will obey some
 physics. According to the mod's description there is now a need for a Steam Engine Block (or any other block on the
-`\#create_train_physics:train_motor` tag) for Trains to actually move, and as a plus, train mass is taken into account
+`#create_train_physics:train_motor` tag) for Trains to actually move, and as a plus, train mass is taken into account
 for climbs and acceleration. If this sounds like a nuisance to you just remove the mod!
 
 > [!TIP]
-> Remember that Steam Engines need tanks to be placed but not to stay placed! This modpack also offers a datapack that
-> adds blast furnaces to the `\#create_train_physics:train_motor` tag)
+> Remember that Steam Engines need tanks to be placed but not to stay placed! This modpack also offers a
+> [datapack](./datapacks) that adds blast furnaces to the `#create_train_physics:train_motor` tag)
 
-<!-- vale off -->
 <!-- markdownlint-disable line-length -->
 
 ## Mod list
@@ -220,5 +213,4 @@ for climbs and acceleration. If this sounds like a nuisance to you just remove t
 - [YetAnotherConfigLib](https://modrinth.com/mod/1eAoo2KR) by isXander
 - [You're in Grave Danger](https://modrinth.com/mod/HnD1GX6e) by b1n_ry
 
-<!-- vale on -->
 <!-- markdownlint-enable line-length -->
