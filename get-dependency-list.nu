@@ -7,8 +7,8 @@ def main [outfile?: path = './dependencies.txt']: nothing -> nothing {
 	} | select name slug pin?
 
   let dependencies = $files | each {|file|
-    $file.slug + "@*(embedded)"
-  } | str join "\n"
+    $file.slug + "(embedded)"
+  } | sort | str join "\n"
 
   $dependencies | save -f $outfile
 }

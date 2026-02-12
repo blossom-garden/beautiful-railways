@@ -22,13 +22,47 @@ jobs:
       - name: Determine version number, pack name and last version number
         id: cat
         run: |
-          echo $(cat ./pack.toml | grep "version = ") | sed -r 's/version = //' | sed -r 's/[" ]//g' | echo "version=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
-          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\" \:]//g' | sed -r 's/([a-z0-9])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]' | echo "name_snake=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
-          echo $(cat ./pack.toml | grep "name = ") | sed -r 's/name = //' | sed -r 's/[\"]//g' | echo "name=$(< /dev/stdin)" >> "${GITHUB_OUTPUT}"
-          echo "LASTTAG=$(git describe --tags --abbrev=0)" >> "${GITHUB_OUTPUT}"
-          echo "deps<<EOF" >> "${GITHUB_OUTPUT}"
-          cat ./dependencies.txt >> "${GITHUB_OUTPUT}"
-          echo "EOF" >> "${GITHUB_OUTPUT}"
+          python3 <<'PY'
+          import tomllib
+          import subprocess
+          import re
+          import os
+
+          # Load TOML safely
+          with open("pack.toml", "rb") as f:
+              data = tomllib.load(f)
+
+          version = str(data["version"])
+          name = str(data["name"])
+
+          # Convert to snake_case
+          name_snake = re.sub(r'[^a-zA-Z0-9]+', '_', name)  # replace spaces/symbols
+          name_snake = re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', name_snake)  # camelCase
+          name_snake = name_snake.lower().strip('_')
+
+          # Get last tag safely
+          try:
+              last_tag = subprocess.check_output(
+                  ["git", "describe", "--tags", "--abbrev=0"],
+                  stderr=subprocess.DEVNULL
+              ).decode().strip()
+          except subprocess.CalledProcessError:
+              last_tag = "none"
+
+          github_output = os.environ["GITHUB_OUTPUT"]
+
+          with open(github_output, "a") as f:
+              f.write(f"version={version}\n")
+              f.write(f"name={name}\n")
+              f.write(f"name_snake={name_snake}\n")
+              f.write(f"LASTTAG={last_tag}\n")
+
+              f.write("deps<<EOF\n")
+              with open("dependencies.txt", "r") as deps_file:
+                  f.write(deps_file.read())
+              f.write("\nEOF\n")
+          PY
+
     outputs:
       version: ${{ steps.cat.outputs.version }}
       name_snake: ${{ steps.cat.outputs.name_snake }}
@@ -68,7 +102,9 @@ jobs:
         id: prepare
         run: |
           mkdir -p ./build
-          echo "body=(cat ./CHANGELOG-LATEST.md)" >> "${GITHUB_OUTPUT}"
+          echo "body<<EOF" >> "${GITHUB_OUTPUT}"
+          cat ./CHANGELOG-LATEST.md >> "${GITHUB_OUTPUT}"
+          echo "EOF" >> "${GITHUB_OUTPUT}"
 
       - name: Setup packwiz CLI
         uses: vspr-sh/packwiz-setup-action@master
@@ -88,8 +124,8 @@ jobs:
 
       - uses: Kir-Antipov/mc-publish@v3.3
         with:
-          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' || null }}
-          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN || null }}
+          modrinth-id: ${{ matrix.platform == 'modrinth' && 'p1qfuGUm' }}
+          modrinth-token: ${{ matrix.platform == 'modrinth' && secrets.MODRINTH_TOKEN }}
 
           github-token: ${{ secrets.GITHUB_TOKEN }}
           github-tag: ${{ env.version }}

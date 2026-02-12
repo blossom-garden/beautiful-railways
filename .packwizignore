@@ -12,4 +12,4 @@
 .markdownlint-cli2.yaml
 *.nu
 *.sh
-import-modlist*
+dependencies.*
