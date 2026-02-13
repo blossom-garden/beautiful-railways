@@ -60,9 +60,9 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ steps.info.outputs.outfile }}
           asset_name: ${{ steps.info.outputs.name-kebab }}.mrpack
-          release_name: ${{ steps.info.outputs.name }}-${{ steps.info.output.game-versions }}-${{ steps.info.outputs.version }}
-          tag: ${{ steps.info.output.version }}
-          body: ${{ steps.info.output.changelog }}
+          release_name: ${{ steps.info.outputs.name }}-${{ steps.info.outputs.game-versions }}-${{ steps.info.outputs.version }}
+          tag: ${{ steps.info.outputs.version }}
+          body: ${{ steps.info.outputs.changelog }}
           overwrite: true
 
       - uses: cloudnode-pro/modrinth-publish@v2
@@ -73,5 +73,5 @@ jobs:
           loaders: ${{ steps.info.outputs.loaders }}
           game-versions: ${{ steps.info.outputs.game-versions }}
           files: ${{ steps.info.outputs.outfile }}
-          name: ${{ steps.info.outputs.name }}-${{ steps.info.output.game-versions }}-${{ steps.info.outputs.version }}
+          name: ${{ steps.info.outputs.name }}-${{ steps.info.outputs.game-versions }}-${{ steps.info.outputs.version }}
           status: ${{ contains(github.ref_name, 'test') && 'draft' || 'listed' }}
