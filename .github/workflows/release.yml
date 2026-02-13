@@ -30,7 +30,27 @@ jobs:
         id: info
         run: |
           let pack = (open ./pack.toml)
-          print $env
+          if (not ("out" | path exists)) { mkdir out }
+          $"version=($pack.version)
+          loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
+          game-versions=($pack.versions.minecraft)
+          name=($pack.name)
+          name-kebab=($pack.name | str kebab-case)
+          outfile=out/($pack.name | str kebab-case).mrpack" | save -a $env.GITHUB_OUTPUT
+
+      - uses: vspr-sh/packwiz-setup-action@master
+      - name: Packwiz export
+        run: ^packwiz modrinth export -o ${{ steps.info.outputs.outfile }}
+
+      - name: Upload package to workflow artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          path: ${{ steps.info.outputs.outfile }}
+          name: ${{ steps.info.outputs.name-kebab }}.mrpack
+          retention-days: 1
+
+      - run: |
+          print ${{ steps.info.outputs }}
 
   # build:
   #   needs:
