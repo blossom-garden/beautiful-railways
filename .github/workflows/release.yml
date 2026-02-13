@@ -74,3 +74,4 @@ jobs:
           game-versions: ${{ steps.info.outputs.game-versions }}
           files: ${{ steps.info.outputs.outfile }}
           name: ${{ steps.info.outputs.name }}-${{ steps.info.output.game-versions }}-${{ steps.info.outputs.version }}
+          status: ${{ contains(github.ref_name, 'test') && 'draft' || 'listed' }}
