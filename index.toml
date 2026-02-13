@@ -305,6 +305,11 @@ hash = "9da22561c3a5e45beb91121518a49f2e8a62bedb332574ce43a9d9b287ebc705"
 metafile = true
 
 [[files]]
+file = "mods/creativecore.pw.toml"
+hash = "43628e26e592a841915076d238fe93c3bbbf247ee5203d0d0fbce96983e72ef0"
+metafile = true
+
+[[files]]
 file = "mods/cristel-lib.pw.toml"
 hash = "d10c6f194a20ef07b764bce9ef35bec526c5c5ff9acf84c53f9e172963869e56"
 metafile = true
@@ -725,6 +730,26 @@ hash = "d398908230f4e68881ca768210c8478eda6762d54859d51b85b166e9c3ed25b6"
 metafile = true
 
 [[files]]
+file = "mods/waterframes.pw.toml"
+hash = "a255c29cb611f60aaad313b223bc424721be5998673002da6b589b2862912621"
+metafile = true
+
+[[files]]
+file = "mods/watermedia-yt-plugin.pw.toml"
+hash = "1854a807eb23924fb0cedecddd8d7a94a99084ac579cef064d8821185cb8f92e"
+metafile = true
+
+[[files]]
+file = "mods/watermedia.pw.toml"
+hash = "976854e8cb0473236ae4ce6b5b29bb901dc46b20d072bfed79e1f07c64b37095"
+metafile = true
+
+[[files]]
+file = "mods/watervision.pw.toml"
+hash = "393310e8c75c51eb3143c8ddcdac51917a5d759d428e5b962e4c2b4c8e87bc0e"
+metafile = true
+
+[[files]]
 file = "mods/wi-zoom.pw.toml"
 hash = "9ec08d474d8c886bc0719b2d27d9b5f1893bc8d4baceb0b78824e4a231e7968b"
 metafile = true
@@ -841,6 +866,11 @@ metafile = true
 [[files]]
 file = "resourcepacks/fusion-connected-glass.pw.toml"
 hash = "cc4c03200baa367d40720320336b692e6c4fe71edbea890e27210bb2cc42408c"
+metafile = true
+
+[[files]]
+file = "resourcepacks/sparkles.pw.toml"
+hash = "8483bbb331920711acf3b58d2bd2702e4f04befb14e1235bc75d04d56c078ac0"
 metafile = true
 
 [[files]]

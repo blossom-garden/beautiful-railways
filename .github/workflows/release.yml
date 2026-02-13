@@ -30,13 +30,18 @@ jobs:
         id: info
         run: |
           let pack = (open ./pack.toml)
+          let changelog = (open ./CHANGELOG-LATEST.md | lines | skip 5 | str join "\n")
           if (not ("out" | path exists)) { mkdir out }
           $"version=($pack.version)
           loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
           game-versions=($pack.versions.minecraft)
           name=($pack.name)
           name-kebab=($pack.name | str kebab-case)
-          outfile=out/($pack.name | str kebab-case).mrpack" | save -a $env.GITHUB_OUTPUT
+          outfile=out/($pack.name | str kebab-case).mrpack
+          changelog<< CHG
+          ($changelog)
+          CHG
+          " | save -a $env.GITHUB_OUTPUT
 
       - uses: vspr-sh/packwiz-setup-action@master
       - name: Packwiz export
@@ -49,92 +54,23 @@ jobs:
           name: ${{ steps.info.outputs.name-kebab }}.mrpack
           retention-days: 1
 
-      - run: |
-          print ${{ steps.info.outputs }}
+      - name: Upload package to GitHub release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ steps.info.outputs.outfile }}
+          asset_name: ${{ steps.info.outputs.name-kebab }}.mrpack
+          release_name: ${{ steps.info.outputs.name }}-${{ steps.info.output.game-versions }}-${{ steps.info.outputs.version }}
+          tag: ${{ steps.info.output.version }}
+          body: ${{ steps.info.output.changelog }}
+          overwrite: true
 
-  # build:
-  #   needs:
-  #     - get-info
-  #   env:
-  #     version: ${{ needs.get-info.outputs.version }}
-  #     name_snake: ${{ needs.get-info.outputs.name_snake }}
-  #     name: ${{ needs.get-info.outputs.name }}
-  #     deps: ${{ needs.get-info.outputs.deps }}
-  #   strategy:
-  #     matrix:
-  #       include:
-  #         - platform: modrinth
-  #           extension: mrpack
-  #           runner: ubuntu-latest
-  #
-  #         - platform: curseforge
-  #           extension: zip
-  #           runner: ubuntu-latest
-  #   runs-on: ${{ matrix.runner }}
-  #   permissions: write-all
-  #   defaults:
-  #     run:
-  #       shell: bash
-  #   if: needs.get-info.outputs.LASTTAG != needs.get-info.outputs.version
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-  #
-  #     - name: Prepare
-  #       id: prepare
-  #       run: |
-  #         mkdir -p ./build
-  #         echo "body<<EOF" >> "${GITHUB_OUTPUT}"
-  #         cat ./CHANGELOG-LATEST.md >> "${GITHUB_OUTPUT}"
-  #         echo "EOF" >> "${GITHUB_OUTPUT}"
-  #
-  #     - name: Setup packwiz CLI
-  #       uses: vspr-sh/packwiz-setup-action@master
-  #
-  #     - name: Export
-  #       id: export
-  #       run: |
-  #         packwiz ${{ matrix.platform }} export -o ./build/${{ env.name_snake }}.${{ matrix.extension }}
-  #         echo "export=./build/${{ env.name_snake }}.${{ matrix.extension }}" >> "${GITHUB_OUTPUT}"
-  #
-  #     - name: Upload mr package to workflow artifacts
-  #       uses: actions/upload-artifact@v6
-  #       with:
-  #         path: ${{ steps.export.outputs.export }}
-  #         name: ${{ env.name_snake }}-${{ matrix.platform }}
-  #         retention-days: 1
-  #
-  #     - uses: Kir-Antipov/mc-publish@v3.3
-  #       if: matrix.platform == 'modrinth'
-  #       with:
-  #         modrinth-id: p1qfuGUm
-  #         modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-  #
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #         github-tag: ${{ env.version }}
-  #
-  #         files: ${{ steps.export.outputs.export }}
-  #         name: ${{ env.name }} v${{ env.version }}
-  #         version: ${{ env.version }}
-  #         version-type: release
-  #         changelog-file: CHANGELOG-LATEST.*
-  #
-  #         loaders: neoforge
-  #         game-versions: 1.21.1
-  #         dependencies: ${{ env.deps }}
-  #
-  #     - uses: Kir-Antipov/mc-publish@v3.3
-  #       if: matrix.platform == 'curseforge'
-  #       with:
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #         github-tag: ${{ env.version }}
-  #
-  #         files: ${{ steps.export.outputs.export }}
-  #         name: ${{ env.name }} v${{ env.version }}
-  #         version: ${{ env.version }}
-  #         version-type: release
-  #         changelog-file: CHANGELOG-LATEST.*
-  #
-  #         loaders: neoforge
-  #         game-versions: 1.21.1
-  #         dependencies: ${{ env.deps }}
+      - uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: p1qfuGUm
+          version: ${{ steps.info.outputs.version }}
+          loaders: ${{ steps.info.outputs.loaders }}
+          game-versions: ${{ steps.info.outputs.game-versions }}
+          files: ${{ steps.info.outputs.outfile }}
+          name: ${{ steps.info.outputs.name }}-${{ steps.info.output.game-versions }}-${{ steps.info.outputs.version }}
