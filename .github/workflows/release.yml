@@ -40,7 +40,7 @@ jobs:
                 project_id: $mod.update.modrinth.mod-id,
                 version_id: $mod.update.modrinth.version,
                 dependency_type: "embedded" }}
-            | to json -r)
+            | to json)
           if (not ("out" | path exists)) { mkdir out }
           $"version=($pack.version)
           loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
@@ -48,7 +48,9 @@ jobs:
           name=($pack.name)
           name-kebab=($pack.name | str kebab-case)
           outfile=out/($pack.name | str kebab-case).mrpack
-          dependencies=($dependencies)
+          dependencies<<DEP
+          ($dependencies)
+          DEP
           changelog<<CHG
           ($changelog)
           CHG
