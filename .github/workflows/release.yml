@@ -38,7 +38,7 @@ jobs:
           name=($pack.name)
           name-kebab=($pack.name | str kebab-case)
           outfile=out/($pack.name | str kebab-case).mrpack
-          changelog<< CHG
+          changelog<<CHG
           ($changelog)
           CHG
           " | save -a $env.GITHUB_OUTPUT
