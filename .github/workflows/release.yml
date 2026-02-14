@@ -39,12 +39,6 @@ jobs:
         run: |
           let pack = (open ./pack.toml)
           let changelog = (open ./CHANGELOG-LATEST.md | lines | skip 5 | str join "\n")
-          let dependencies = (ls **/*.pw.toml
-            | where name =~ '(resourcepacks|shaders|mods)'
-            | each {|file| open $file.name }
-            | each {|mod| { file_name: $mod.filename, dependency_type: "embedded" }}
-            | to json -r)
-
           if (not ("out" | path exists)) { mkdir out }
           $"version=($pack.version)
           loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
