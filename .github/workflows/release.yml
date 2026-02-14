@@ -2,6 +2,12 @@ name: Export Modpack
 
 on:
   workflow_dispatch:
+    inputs:
+      draft:
+        type: boolean
+        default: false
+        required: false
+        description: Should be a Draft release?
   push:
     branches: [main]
   pull_request:
@@ -36,11 +42,8 @@ jobs:
           let dependencies = (ls **/*.pw.toml
             | where name =~ '(resourcepacks|shaders|mods)'
             | each {|file| open $file.name }
-            | each {|mod| {
-                project_id: $mod.update.modrinth.mod-id,
-                version_id: $mod.update.modrinth.version,
-                dependency_type: "embedded" }}
-            | to json)
+            | each {|mod| { file_name: $mod.filename, dependency_type: "embedded" }}
+            | to json -r)
           if (not ("out" | path exists)) { mkdir out }
           $"version=($pack.version)
           loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
@@ -88,5 +91,5 @@ jobs:
           files: ${{ steps.info.outputs.outfile }}
           name: ${{ steps.info.outputs.name }}-${{ steps.info.outputs.game-versions }}-${{ steps.info.outputs.version }}
           changelog: ${{ steps.info.outputs.changelog }}
-          status: ${{ contains(github.ref_name, 'test') && 'draft' || 'listed' }}
+          status: ${{ ( contains(github.ref_name, 'test') || inputs.draft ) && 'draft' || 'listed' }}
           dependencies: ${{ steps.info.outputs.dependencies }}
