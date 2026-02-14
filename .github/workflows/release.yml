@@ -44,6 +44,7 @@ jobs:
             | each {|file| open $file.name }
             | each {|mod| { file_name: $mod.filename, dependency_type: "embedded" }}
             | to json -r)
+
           if (not ("out" | path exists)) { mkdir out }
           $"version=($pack.version)
           loaders=($pack.versions | columns | where ($it != "minecraft") | to json -r)
@@ -51,9 +52,6 @@ jobs:
           name=($pack.name)
           name-kebab=($pack.name | str kebab-case)
           outfile=out/($pack.name | str kebab-case).mrpack
-          dependencies<<DEP
-          ($dependencies)
-          DEP
           changelog<<CHG
           ($changelog)
           CHG
@@ -92,4 +90,3 @@ jobs:
           name: ${{ steps.info.outputs.name }}-${{ steps.info.outputs.game-versions }}-${{ steps.info.outputs.version }}
           changelog: ${{ steps.info.outputs.changelog }}
           status: ${{ ( contains(github.ref_name, 'test') || inputs.draft ) && 'draft' || 'listed' }}
-          dependencies: ${{ steps.info.outputs.dependencies }}
