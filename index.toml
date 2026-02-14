@@ -70,6 +70,11 @@ hash = "8169fa6b9fd786fcff725d88a4a3d344fecadb4abc2b2823c65af099d3a82147"
 metafile = true
 
 [[files]]
+file = "mods/better-ladders.pw.toml"
+hash = "a2de71521eafd8cc3e1bbdac3e9468cb24a513dab8751ec7f66ba926af9833aa"
+metafile = true
+
+[[files]]
 file = "mods/blocks-bogies.pw.toml"
 hash = "feb4efaaeaa4ee270d04de7f06e377ada25e3977649c7d6de227ea6338396634"
 metafile = true

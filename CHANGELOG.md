@@ -4,6 +4,13 @@
 
 # Create: Beautiful Railways
 
+**1.2.1**
+
+**Added**
+
+- Mods
+  - [Better Ladders](https://modrinth.com/project/CvgtCmGj) by meeetj
+
 **1.2.0**
 
 **Added**
