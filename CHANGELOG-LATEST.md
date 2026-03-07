@@ -3,15 +3,12 @@
 <!-- markdownlint-disable first-line-h1 -->
 <!-- markdownlint-disable no-emphasis-as-heading -->
 
-**1.3.1**
+**1.4.0**
 
 **Added**
 
 - Mods
-  - [Reconnectible Chains](https://modrinth.com/project/5pzBXDS3) by evanbones
-  - [Ziplines: Rezipped!](https://modrinth.com/project/C1MoWQlb) by evanbones
-
-**Removed**
-
-- Misc
-  - Packwiz Installer jar file
+  - [Civillis](https://modrinth.com/project/Dx2SPPEi) by MaoxnZ
+  - [Steam 'n' Rails Neoforge](https://modrinth.com/project/L3Jv0QZI) by PoppyBlossom, Chameleon538
+  - [Fairy Lights](https://modrinth.com/project/BC84wYkA) by imbavirus
+  - [Simply Tents](https://modrinth.com/project/yWY7WWmg) by SappyEddie

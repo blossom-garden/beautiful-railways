@@ -115,6 +115,11 @@ hash = "24c6c3fe917ffbcef04e788dec3e003d0ed03433bc00f9cf4f23fe9b85636aa7"
 metafile = true
 
 [[files]]
+file = "mods/civillis.pw.toml"
+hash = "fec1cbf357e7f41b307dff902d89597f00a647ffaca9ec8b16ac0b512723dc0b"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "75181b55e0407d1fca1e2f346c6501f919f5109545990ddfb66db9cd1b771f8a"
 metafile = true
@@ -280,6 +285,11 @@ hash = "fcfad54d985bbb7065956bae52b949837644c51c639f99f1adb80f72f81728e9"
 metafile = true
 
 [[files]]
+file = "mods/create-steam-n-rails-1.21.1.pw.toml"
+hash = "fa7e815272f183ccdeac6baff3690f6291c4117646af8912123b705fde64dbef"
+metafile = true
+
+[[files]]
 file = "mods/create-threaded-trains.pw.toml"
 hash = "cc05bcaec0e857c6a6f7de4bd09a22ad195b5b77a25e4adfe737915ac3be68db"
 metafile = true
@@ -382,6 +392,11 @@ metafile = true
 [[files]]
 file = "mods/exposure.pw.toml"
 hash = "7b6dbe885c4fa12d5c9cb8182138305575eff19aed1e7f969a5ef343f841ee87"
+metafile = true
+
+[[files]]
+file = "mods/fairy-lights-neoforge.pw.toml"
+hash = "0a4ed3675a4aeb366af218df5ef64f5ca82d071f24c2165ad4b0d9e055264721"
 metafile = true
 
 [[files]]
@@ -640,6 +655,11 @@ hash = "15c145ff1f48e22759871c48775951ade48bc1875b2acc9f88c23b78537c596a"
 metafile = true
 
 [[files]]
+file = "mods/simply-tents.pw.toml"
+hash = "69754b5443b9c04c40d70ac41fd5ba9812279b14cdfa22132be1f7aa23b70143"
+metafile = true
+
+[[files]]
 file = "mods/skinrestorer.pw.toml"
 hash = "ca1085c84e7388939444ae3cd78546a89709ccfaf3a239db2d2be284019090b0"
 metafile = true
@@ -870,8 +890,8 @@ hash = "4230e63e7f715d9becfabcb05d0c4ada5efd7462e206ca37868b0a1a356a2e6d"
 metafile = true
 
 [[files]]
-file = "resourcepacks/Brassless Blocks n Bogies (Official).zip"
-hash = "410697c8fcca41c29b1720eeb311a54c04712b4ca7bbbe38a4d90cf296553142"
+file = "resourcepacks/Brassless Blocks n Bogies (Official Pack).zip"
+hash = "cc17f486e83775fce7b12dcb61c2885208059fb878f7dd0232cfaec12a0c412b"
 
 [[files]]
 file = "resourcepacks/create-sophisticated-backpacks.pw.toml"

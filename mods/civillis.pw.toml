@@ -1,0 +1,13 @@
+name = "Civillis"
+filename = "civillis-neoforge-1.1.1-release+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Dx2SPPEi/versions/MbJ8yLLM/civillis-neoforge-1.1.1-release%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "6ff6d1d54ac87730218913263fd8548e075e8ddfee532a69d50c19a9d460c4cf8d8e084bdf15ee17af9d5a5954645b177748f8ff272c5f8e27ea39f42a414688"
+
+[update]
+[update.modrinth]
+mod-id = "Dx2SPPEi"
+version = "MbJ8yLLM"

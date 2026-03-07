@@ -1,0 +1,13 @@
+name = "Simply Tents"
+filename = "simplytents-REMASTEREDNeoForge v2.8.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/yWY7WWmg/versions/aw7bD9M6/simplytents-REMASTEREDNeoForge%20v2.8.jar"
+hash-format = "sha512"
+hash = "dd05a5045dffbf4520f03cd5317d14c0e82e198404565113c1a121bb3240db0ebf900ef7c7331135ff3332b16d60d30bd1ccd26575421d209595866d4133560f"
+
+[update]
+[update.modrinth]
+mod-id = "yWY7WWmg"
+version = "aw7bD9M6"

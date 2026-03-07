@@ -4,6 +4,16 @@
 
 # Create: Beautiful Railways
 
+**1.4.0**
+
+**Added**
+
+- Mods
+  - [Civillis](https://modrinth.com/project/Dx2SPPEi) by MaoxnZ
+  - [Steam 'n' Rails Neoforge](https://modrinth.com/project/L3Jv0QZI) by PoppyBlossom, Chameleon538
+  - [Fairy Lights](https://modrinth.com/project/BC84wYkA) by imbavirus
+  - [Simply Tents](https://modrinth.com/project/yWY7WWmg) by SappyEddie
+
 **1.3.1**
 
 **Added**
