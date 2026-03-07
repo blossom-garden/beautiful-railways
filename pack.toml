@@ -1,12 +1,12 @@
 name = "Create: Beautiful Railways"
 author = "KodiiTulip"
-version = "1.2.1"
+version = "1.3.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "f84675ce8121daa606c3f713c008ff374bf0d0326cf55a358f7621bd8657ec06"
+hash = "ec1c6a550967e0535515e1da756c977254f505c89d6a60434ff457befc6c3c97"
 
 [versions]
 minecraft = "1.21.1"

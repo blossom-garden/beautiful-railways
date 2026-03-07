@@ -270,16 +270,6 @@ hash = "59467ecda962858e575fe59ddedfeab19f2a3c85128070a3f8ef6ad6575debfa"
 metafile = true
 
 [[files]]
-file = "mods/create-ratatouille-fried-delights.pw.toml"
-hash = "8f7c2ff2d506104a8b70c40e51e1219929f809406175e6df05838ef3a5ffe5c1"
-metafile = true
-
-[[files]]
-file = "mods/create-ratatouille.pw.toml"
-hash = "4677335e3f0f33cc98acec5b4dd8cb092a63c913fa41f1b64f2096bd57639fcf"
-metafile = true
-
-[[files]]
 file = "mods/create-smart-bounds.pw.toml"
 hash = "7e6cdbf3b08697812e6954426b5e1aa8f3159d48e5b63913d2814a54f62d52dc"
 metafile = true
@@ -292,6 +282,11 @@ metafile = true
 [[files]]
 file = "mods/create-threaded-trains.pw.toml"
 hash = "cc05bcaec0e857c6a6f7de4bd09a22ad195b5b77a25e4adfe737915ac3be68db"
+metafile = true
+
+[[files]]
+file = "mods/create-train-physics.pw.toml"
+hash = "74fd26d54124d93c82dc9d004b4eefb871137339a4393743514475583e34aadc"
 metafile = true
 
 [[files]]
@@ -550,11 +545,6 @@ hash = "86a9a547931b50ca0d9716912f2858e15b05e71e3359f40f0667994c2e28c9d2"
 metafile = true
 
 [[files]]
-file = "mods/pineapple-delight.pw.toml"
-hash = "f90f7ee6f54a206ee9f827af7ab79e340e3acbe0f68c4c515dba40ce4beb1cab"
-metafile = true
-
-[[files]]
 file = "mods/pizzadelight.pw.toml"
 hash = "ef95253df9bbfe5761482d7f675d772873268a534bb8e4950cb06beb78082609"
 metafile = true
@@ -667,11 +657,6 @@ metafile = true
 [[files]]
 file = "mods/sodium.pw.toml"
 hash = "0281ed9713f3141bdac363056a791845510e14761ea65b4b2813cf96d664b20a"
-metafile = true
-
-[[files]]
-file = "mods/some-assembly-required.pw.toml"
-hash = "04f06b630fb9479786c6b86696af543d7108b3dba50f651437c865d02e773a0f"
 metafile = true
 
 [[files]]
