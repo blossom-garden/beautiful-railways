@@ -600,6 +600,11 @@ hash = "b4cb292255e46d058ef9c4a6bcdf562ae539489a31d0b4bea3718042d98e5c86"
 metafile = true
 
 [[files]]
+file = "mods/reconnectible-chains.pw.toml"
+hash = "055f4a4984bf72d4165be0bde669d66059c609c02df4042e1495b63341bfe580"
+metafile = true
+
+[[files]]
 file = "mods/reeses-sodium-options.pw.toml"
 hash = "09306b955060349986ccf6a6d2a67f1e019fa172a7dc690dd6007f81c966309a"
 metafile = true
@@ -857,6 +862,11 @@ metafile = true
 [[files]]
 file = "mods/yungs-better-witch-huts.pw.toml"
 hash = "e2b23d0a1bf228d37ff8c3330150c24eb19cb875e113fae543191f34ded92ff8"
+metafile = true
+
+[[files]]
+file = "mods/ziplines-rezipped.pw.toml"
+hash = "4230e63e7f715d9becfabcb05d0c4ada5efd7462e206ca37868b0a1a356a2e6d"
 metafile = true
 
 [[files]]
