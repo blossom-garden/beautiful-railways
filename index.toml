@@ -860,11 +860,6 @@ hash = "e2b23d0a1bf228d37ff8c3330150c24eb19cb875e113fae543191f34ded92ff8"
 metafile = true
 
 [[files]]
-file = "packwiz-installer-bootstrap.pw.toml"
-hash = "66fd4a47f4eb3fc7b0e487b0fafc998f009e889188bcc5a609d04c2ab97e369f"
-metafile = true
-
-[[files]]
 file = "resourcepacks/Brassless Blocks n Bogies (Official).zip"
 hash = "410697c8fcca41c29b1720eeb311a54c04712b4ca7bbbe38a4d90cf296553142"
 
